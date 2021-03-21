@@ -22,11 +22,11 @@ t1 = BashOperator(
     dag=dag
 )
 
-rockets = ["all","falcon1","falcon9","falconheavy"]
+#rockets = ["all","falcon1","falcon9","falconheavy"]
 
 
 t2 = BashOperator(
-for rocket in rockets:
+#for rocket in rockets:
     task_id="print_data", 
     bash_command="cat /var/data/year={{ execution_date.year }}/rocket={{ params.rocket }}/data.csv", 
     params={"rocket": "all","falcon1","falcon9","falconheavy"}, # falcon1/falcon9/falconheavy
